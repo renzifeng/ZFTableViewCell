@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCA054611BF58CC10053946F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA054601BF58CC10053946F /* main.m */; };
+		CCA054641BF58CC10053946F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA054631BF58CC10053946F /* AppDelegate.m */; };
+		CCA054671BF58CC10053946F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA054661BF58CC10053946F /* ViewController.m */; };
+		CCA0546A1BF58CC10053946F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA054681BF58CC10053946F /* Main.storyboard */; };
+		CCA0546C1BF58CC10053946F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA0546B1BF58CC10053946F /* Assets.xcassets */; };
+		CCA0546F1BF58CC10053946F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA0546D1BF58CC10053946F /* LaunchScreen.storyboard */; };
+		CCA0547A1BF58CC10053946F /* ZFTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA054791BF58CC10053946F /* ZFTableViewCellTests.m */; };
+		CCA054851BF58CC10053946F /* ZFTableViewCellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA054841BF58CC10053946F /* ZFTableViewCellUITests.m */; };
+		CCA054951BF58D0A0053946F /* ZFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA054941BF58D0A0053946F /* ZFTableViewCell.m */; };
+		CCA054981BF58D5F0053946F /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA054971BF58D5F0053946F /* TestTableViewCell.m */; };
+		CCA054F21BF709170053946F /* ZFShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA054F11BF709170053946F /* ZFShareView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCA054761BF58CC10053946F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA054541BF58CC10053946F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA0545B1BF58CC10053946F;
+			remoteInfo = ZFTableViewCell;
+		};
+		CCA054811BF58CC10053946F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA054541BF58CC10053946F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA0545B1BF58CC10053946F;
+			remoteInfo = ZFTableViewCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CCA0545C1BF58CC10053946F /* ZFTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA054601BF58CC10053946F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CCA054621BF58CC10053946F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CCA054631BF58CC10053946F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CCA054651BF58CC10053946F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CCA054661BF58CC10053946F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CCA054691BF58CC10053946F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCA0546B1BF58CC10053946F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCA0546E1BF58CC10053946F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCA054701BF58CC10053946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA054751BF58CC10053946F /* ZFTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA054791BF58CC10053946F /* ZFTableViewCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFTableViewCellTests.m; sourceTree = "<group>"; };
+		CCA0547B1BF58CC10053946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA054801BF58CC10053946F /* ZFTableViewCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFTableViewCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA054841BF58CC10053946F /* ZFTableViewCellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFTableViewCellUITests.m; sourceTree = "<group>"; };
+		CCA054861BF58CC10053946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA054931BF58D0A0053946F /* ZFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFTableViewCell.h; sourceTree = "<group>"; };
+		CCA054941BF58D0A0053946F /* ZFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTableViewCell.m; sourceTree = "<group>"; };
+		CCA054961BF58D5F0053946F /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		CCA054971BF58D5F0053946F /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		CCA054F01BF709170053946F /* ZFShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFShareView.h; sourceTree = "<group>"; };
+		CCA054F11BF709170053946F /* ZFShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFShareView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCA054591BF58CC10053946F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA054721BF58CC10053946F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA0547D1BF58CC10053946F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCA054531BF58CC10053946F = {
+			isa = PBXGroup;
+			children = (
+				CCA0545E1BF58CC10053946F /* ZFTableViewCell */,
+				CCA054781BF58CC10053946F /* ZFTableViewCellTests */,
+				CCA054831BF58CC10053946F /* ZFTableViewCellUITests */,
+				CCA0545D1BF58CC10053946F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCA0545D1BF58CC10053946F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCA0545C1BF58CC10053946F /* ZFTableViewCell.app */,
+				CCA054751BF58CC10053946F /* ZFTableViewCellTests.xctest */,
+				CCA054801BF58CC10053946F /* ZFTableViewCellUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCA0545E1BF58CC10053946F /* ZFTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CCA054921BF58CDE0053946F /* ZFTableViewCell */,
+				CCA054621BF58CC10053946F /* AppDelegate.h */,
+				CCA054631BF58CC10053946F /* AppDelegate.m */,
+				CCA054651BF58CC10053946F /* ViewController.h */,
+				CCA054661BF58CC10053946F /* ViewController.m */,
+				CCA054961BF58D5F0053946F /* TestTableViewCell.h */,
+				CCA054971BF58D5F0053946F /* TestTableViewCell.m */,
+				CCA054681BF58CC10053946F /* Main.storyboard */,
+				CCA0546B1BF58CC10053946F /* Assets.xcassets */,
+				CCA0546D1BF58CC10053946F /* LaunchScreen.storyboard */,
+				CCA054701BF58CC10053946F /* Info.plist */,
+				CCA0545F1BF58CC10053946F /* Supporting Files */,
+			);
+			path = ZFTableViewCell;
+			sourceTree = "<group>";
+		};
+		CCA0545F1BF58CC10053946F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCA054601BF58CC10053946F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCA054781BF58CC10053946F /* ZFTableViewCellTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCA054791BF58CC10053946F /* ZFTableViewCellTests.m */,
+				CCA0547B1BF58CC10053946F /* Info.plist */,
+			);
+			path = ZFTableViewCellTests;
+			sourceTree = "<group>";
+		};
+		CCA054831BF58CC10053946F /* ZFTableViewCellUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCA054841BF58CC10053946F /* ZFTableViewCellUITests.m */,
+				CCA054861BF58CC10053946F /* Info.plist */,
+			);
+			path = ZFTableViewCellUITests;
+			sourceTree = "<group>";
+		};
+		CCA054921BF58CDE0053946F /* ZFTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CCA054931BF58D0A0053946F /* ZFTableViewCell.h */,
+				CCA054941BF58D0A0053946F /* ZFTableViewCell.m */,
+				CCA054F01BF709170053946F /* ZFShareView.h */,
+				CCA054F11BF709170053946F /* ZFShareView.m */,
+			);
+			path = ZFTableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCA0545B1BF58CC10053946F /* ZFTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA054891BF58CC10053946F /* Build configuration list for PBXNativeTarget "ZFTableViewCell" */;
+			buildPhases = (
+				CCA054581BF58CC10053946F /* Sources */,
+				CCA054591BF58CC10053946F /* Frameworks */,
+				CCA0545A1BF58CC10053946F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZFTableViewCell;
+			productName = ZFTableViewCell;
+			productReference = CCA0545C1BF58CC10053946F /* ZFTableViewCell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCA054741BF58CC10053946F /* ZFTableViewCellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA0548C1BF58CC10053946F /* Build configuration list for PBXNativeTarget "ZFTableViewCellTests" */;
+			buildPhases = (
+				CCA054711BF58CC10053946F /* Sources */,
+				CCA054721BF58CC10053946F /* Frameworks */,
+				CCA054731BF58CC10053946F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCA054771BF58CC10053946F /* PBXTargetDependency */,
+			);
+			name = ZFTableViewCellTests;
+			productName = ZFTableViewCellTests;
+			productReference = CCA054751BF58CC10053946F /* ZFTableViewCellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCA0547F1BF58CC10053946F /* ZFTableViewCellUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA0548F1BF58CC10053946F /* Build configuration list for PBXNativeTarget "ZFTableViewCellUITests" */;
+			buildPhases = (
+				CCA0547C1BF58CC10053946F /* Sources */,
+				CCA0547D1BF58CC10053946F /* Frameworks */,
+				CCA0547E1BF58CC10053946F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCA054821BF58CC10053946F /* PBXTargetDependency */,
+			);
+			name = ZFTableViewCellUITests;
+			productName = ZFTableViewCellUITests;
+			productReference = CCA054801BF58CC10053946F /* ZFTableViewCellUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCA054541BF58CC10053946F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "任子丰";
+				TargetAttributes = {
+					CCA0545B1BF58CC10053946F = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					CCA054741BF58CC10053946F = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CCA0545B1BF58CC10053946F;
+					};
+					CCA0547F1BF58CC10053946F = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CCA0545B1BF58CC10053946F;
+					};
+				};
+			};
+			buildConfigurationList = CCA054571BF58CC10053946F /* Build configuration list for PBXProject "ZFTableViewCell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCA054531BF58CC10053946F;
+			productRefGroup = CCA0545D1BF58CC10053946F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCA0545B1BF58CC10053946F /* ZFTableViewCell */,
+				CCA054741BF58CC10053946F /* ZFTableViewCellTests */,
+				CCA0547F1BF58CC10053946F /* ZFTableViewCellUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCA0545A1BF58CC10053946F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA0546F1BF58CC10053946F /* LaunchScreen.storyboard in Resources */,
+				CCA0546C1BF58CC10053946F /* Assets.xcassets in Resources */,
+				CCA0546A1BF58CC10053946F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA054731BF58CC10053946F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA0547E1BF58CC10053946F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCA054581BF58CC10053946F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA054671BF58CC10053946F /* ViewController.m in Sources */,
+				CCA054981BF58D5F0053946F /* TestTableViewCell.m in Sources */,
+				CCA054F21BF709170053946F /* ZFShareView.m in Sources */,
+				CCA054641BF58CC10053946F /* AppDelegate.m in Sources */,
+				CCA054611BF58CC10053946F /* main.m in Sources */,
+				CCA054951BF58D0A0053946F /* ZFTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA054711BF58CC10053946F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA0547A1BF58CC10053946F /* ZFTableViewCellTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA0547C1BF58CC10053946F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA054851BF58CC10053946F /* ZFTableViewCellUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCA054771BF58CC10053946F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA0545B1BF58CC10053946F /* ZFTableViewCell */;
+			targetProxy = CCA054761BF58CC10053946F /* PBXContainerItemProxy */;
+		};
+		CCA054821BF58CC10053946F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA0545B1BF58CC10053946F /* ZFTableViewCell */;
+			targetProxy = CCA054811BF58CC10053946F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCA054681BF58CC10053946F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCA054691BF58CC10053946F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCA0546D1BF58CC10053946F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCA0546E1BF58CC10053946F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCA054871BF58CC10053946F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CCA054881BF58CC10053946F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCA0548A1BF58CC10053946F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZFTableViewCell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zifeng.ZFTableViewCell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CCA0548B1BF58CC10053946F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZFTableViewCell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zifeng.ZFTableViewCell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CCA0548D1BF58CC10053946F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZFTableViewCellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zifeng.ZFTableViewCellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZFTableViewCell.app/ZFTableViewCell";
+			};
+			name = Debug;
+		};
+		CCA0548E1BF58CC10053946F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZFTableViewCellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zifeng.ZFTableViewCellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZFTableViewCell.app/ZFTableViewCell";
+			};
+			name = Release;
+		};
+		CCA054901BF58CC10053946F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZFTableViewCellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zifeng.ZFTableViewCellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZFTableViewCell;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CCA054911BF58CC10053946F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZFTableViewCellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zifeng.ZFTableViewCellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZFTableViewCell;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCA054571BF58CC10053946F /* Build configuration list for PBXProject "ZFTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA054871BF58CC10053946F /* Debug */,
+				CCA054881BF58CC10053946F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA054891BF58CC10053946F /* Build configuration list for PBXNativeTarget "ZFTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA0548A1BF58CC10053946F /* Debug */,
+				CCA0548B1BF58CC10053946F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA0548C1BF58CC10053946F /* Build configuration list for PBXNativeTarget "ZFTableViewCellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA0548D1BF58CC10053946F /* Debug */,
+				CCA0548E1BF58CC10053946F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA0548F1BF58CC10053946F /* Build configuration list for PBXNativeTarget "ZFTableViewCellUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA054901BF58CC10053946F /* Debug */,
+				CCA054911BF58CC10053946F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCA054541BF58CC10053946F /* Project object */;
+}
