@@ -25,14 +25,7 @@ typedef NS_ENUM(NSInteger,ZFTableViewCellState){
 
 @end
 
-@interface ZFTableViewCell : UITableViewCell{
-    ZFTableViewCellState _state;
-}
-/** 当前Cell的状态*/
-@property (nonatomic,assign) ZFTableViewCellState state;
-@property (nonatomic,assign) UITableView *tableView;
-/** 右划显示btn的背景视图*/
-@property (nonatomic,strong) UIView *buttonsView;
+@interface ZFTableViewCell : UITableViewCell
 /** 分享的View*/
 @property (strong, nonatomic) ZFShareView *shareView;
 /** 每个cell上的右划ScrollView */
@@ -41,8 +34,7 @@ typedef NS_ENUM(NSInteger,ZFTableViewCellState){
 @property (nonatomic,strong) UIView *cellContentView;
 /** 右划编辑的代理*/
 @property (nonatomic,assign) id<ZFTableViewCellDelegate> delegate;
-/** 按钮的标题*/
-@property (nonatomic,copy) NSArray *rightButtonTitles;
+
 /**
  *  自定义Cell
  *
@@ -56,11 +48,12 @@ typedef NS_ENUM(NSInteger,ZFTableViewCellState){
  *  @return 返回cell
  */
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
-              reuseIdentifier:(NSString *)reuseIdentifier
-                     delegate:(id<ZFTableViewCellDelegate>)delegate
-                  inTableView:(UITableView*)tableView
-                 withRowHight:(CGFloat)rowHeight
-        withRightButtonTitles:(NSArray*)rightButtonTitles
-        withRightButtonColors:(NSArray *)rightButtonColors;
+reuseIdentifier:(NSString *)reuseIdentifier
+delegate:(id<ZFTableViewCellDelegate>)delegate
+inTableView:(UITableView*)tableView
+withRowHight:(CGFloat)rowHeight
+withRightButtonTitles:(NSArray*)rightButtonTitles
+withRightButtonColors:(NSArray *)rightButtonColors;
+    
 
 @end

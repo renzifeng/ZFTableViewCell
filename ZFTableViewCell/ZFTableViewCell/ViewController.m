@@ -92,8 +92,6 @@
         //通知，把cell改为原来的状态
         [[NSNotificationCenter defaultCenter] postNotificationName:ZFTableViewCellNotificationChangeToUnexpanded object:nil];
     }else if (buttonIndex == 2) {
-        //通知，把cell改为原来的状态
-        [[NSNotificationCenter defaultCenter] postNotificationName:ZFTableViewCellNotificationChangeToUnexpanded object:nil];
         //分享
         [cell.scrollView setContentOffset:CGPointMake(ScreenWidth, 0.0f) animated:YES];
         [UIView animateWithDuration:.3 animations:^{
