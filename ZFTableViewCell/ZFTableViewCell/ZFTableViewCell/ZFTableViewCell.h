@@ -48,12 +48,11 @@ typedef NS_ENUM(NSInteger,ZFTableViewCellState){
  *  @return 返回cell
  */
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
-reuseIdentifier:(NSString *)reuseIdentifier
-delegate:(id<ZFTableViewCellDelegate>)delegate
-inTableView:(UITableView*)tableView
-withRowHight:(CGFloat)rowHeight
-withRightButtonTitles:(NSArray*)rightButtonTitles
-withRightButtonColors:(NSArray *)rightButtonColors;
+              reuseIdentifier:(NSString *)reuseIdentifier
+                     delegate:(id<ZFTableViewCellDelegate>)delegate
+                  inTableView:(UITableView*)tableView
+        withRightButtonTitles:(NSArray*)rightButtonTitles
+        withRightButtonColors:(NSArray *)rightButtonColors;
     
 
 @end

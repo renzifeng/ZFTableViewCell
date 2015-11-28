@@ -20,6 +20,7 @@
         for (int i = 0; i < 4; i++) {
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             btn.frame = CGRectMake(ScreenWidth/4*i, 0, ScreenWidth/4, frame.size.height);
+            btn.autoresizingMask = UIViewAutoresizingFlexibleHeight;
             btn.tag = i;
             btn.backgroundColor = colorArr[i];
             [btn setTitle:titleArr[i] forState:UIControlStateNormal];

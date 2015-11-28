@@ -50,7 +50,6 @@ static ZFTableViewCell *_editingCell;
               reuseIdentifier:(NSString *)reuseIdentifier
                      delegate:(id<ZFTableViewCellDelegate>)delegate
                   inTableView:(UITableView *)tableView
-                 withRowHight:(CGFloat)rowHeight
         withRightButtonTitles:(NSArray*)rightButtonTitles
         withRightButtonColors:(NSArray *)rightButtonColors
 {
@@ -58,7 +57,8 @@ static ZFTableViewCell *_editingCell;
     if (self) {
         self.tableView = tableView;
         self.delegate = delegate;
-        _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, rowHeight)];
+        CGFloat rowHeight = self.bounds.size.height;
+        _scrollView = [[UIScrollView alloc]init];
         _scrollView.contentSize = CGSizeMake(ScreenWidth + ZFTableViewCellButtonWidth * (rightButtonTitles.count), rowHeight);
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.showsVerticalScrollIndicator = NO;
@@ -105,14 +105,7 @@ static ZFTableViewCell *_editingCell;
         UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onTapGesture:)];
         [self.cellContentView addGestureRecognizer:tapGesture];
         
-        
-//        UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeGesture:)];
-//        swipeGesture.direction = UISwipeGestureRecognizerDirectionRight |
-//        UISwipeGestureRecognizerDirectionLeft  |
-//        UISwipeGestureRecognizerDirectionUp   |
-//        UISwipeGestureRecognizerDirectionDown;
-//        [self.cellContentView addGestureRecognizer:swipeGesture];
-        
+   
         ///外部通知，把cell改为原来的状态
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationChangeToUnexpanded:) name:ZFTableViewCellNotificationChangeToUnexpanded object:nil];
         ///内部通知所有的cell可以滚动scrollView了
@@ -126,10 +119,25 @@ static ZFTableViewCell *_editingCell;
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 -(void)prepareForReuse{
     [super prepareForReuse];
     [self.scrollView setContentOffset:CGPointZero];
 }
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    CGFloat height = self.bounds.size.height;
+    _scrollView.frame = CGRectMake(0, 0, ScreenWidth, height);
+    _shareView.frame = CGRectMake(ScreenWidth, 0, ScreenWidth, height);
+    CGFloat leftButtonViewWidth = ZFTableViewCellButtonWidth * self.rightButtonTitles.count;
+    _buttonsView.frame = CGRectMake(ScreenWidth-leftButtonViewWidth, 0,
+                                    leftButtonViewWidth, height);
+    _cellContentView.frame = self.bounds;
+    
+}
+
 #pragma mark - Properties
 -(void)setState:(ZFTableViewCellState)state{
     _state = state;
@@ -173,7 +181,9 @@ static ZFTableViewCell *_editingCell;
 -(ZFTableViewCellState)state{
     return _state;
 }
+
 #pragma mark - Action
+
 -(void)onButton:(id)sender{
     NSIndexPath* indexPath = [self.tableView indexPathForCell:self];
     UIButton* button = (UIButton*)sender;
@@ -181,7 +191,9 @@ static ZFTableViewCell *_editingCell;
         [self.delegate buttonTouchedOnCell:self atIndexPath:indexPath atButtonIndex:button.tag];
     }
 }
+
 #pragma mark - Gesture
+
 -(void)onTapGesture:(UITapGestureRecognizer*)recognizer{
     if (_editingCell){
         _editingCell.state = ZFTableViewCellStateUnexpanded;
@@ -192,11 +204,6 @@ static ZFTableViewCell *_editingCell;
             [self.tableView.delegate tableView:self.tableView didSelectRowAtIndexPath:cellIndexPath];
         }
     }
-}
-
-- (void)swipeGesture:(UISwipeGestureRecognizer *)recognizer
-{
-    _editingCell.state = ZFTableViewCellStateUnexpanded;
 }
 
 -(void)onPanGesture:(UIPanGestureRecognizer*)recognizer{
@@ -218,20 +225,41 @@ static ZFTableViewCell *_editingCell;
         _editingCell.state = ZFTableViewCellStateUnexpanded;
     }
 }
+
 #pragma mark - UIScrollViewDelegate
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if(scrollView.contentOffset.x < 0) {
+        self.scrollView.scrollEnabled = NO;
+        return;
+    }
+    self.scrollView.scrollEnabled = YES;
     self.buttonsView.transform = CGAffineTransformMakeTranslation(scrollView.contentOffset.x, 0.0f);
 }
+
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (scrollView.contentOffset.x >= self.buttonsView.frame.size.width/2 ){
+    self.scrollView.scrollEnabled = YES;
+    if (scrollView.contentOffset.x >= self.buttonsView.frame.size.width / self.rightButtonTitles.count){
         self.state = ZFTableViewCellStateExpanded;
-    }
-    else{
+    }else if(scrollView.contentOffset.x < 0) {
+        self.scrollView.scrollEnabled = NO;
+        return;
+    }else{
         self.state = ZFTableViewCellStateUnexpanded;
     }
 }
 
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    if(scrollView.contentOffset.x < 0) {
+        self.scrollView.scrollEnabled = NO;
+        return;
+    }
+    scrollView.scrollEnabled = YES;
+}
+
 #pragma mark - Notififcation
+
 ///外部通知，把cell改为原来的状态
 -(void)notificationChangeToUnexpanded:(NSNotification*)notification{
     self.state = ZFTableViewCellStateUnexpanded;

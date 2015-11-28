@@ -14,7 +14,6 @@
               reuseIdentifier:(NSString *)reuseIdentifier
                      delegate:(id<ZFTableViewCellDelegate>)delegate
                   inTableView:(UITableView *)tableView
-                 withRowHight:(CGFloat)rowHeight
         withRightButtonTitles:(NSArray *)rightButtonTitles
         withRightButtonColors:(NSArray *)rightButtonColors
 {
@@ -22,20 +21,20 @@
                 reuseIdentifier:reuseIdentifier
                        delegate:delegate
                     inTableView:tableView
-                   withRowHight:rowHeight
           withRightButtonTitles:rightButtonTitles
           withRightButtonColors:rightButtonColors];
     if (self){
-        _contentLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 200, rowHeight)];
+        _contentLabel = [[UILabel alloc] init];
         _contentLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [self.cellContentView addSubview:_contentLabel];
     }
     return self;
 }
-//-(CGSize)sizeThatFits:(CGSize)size
-//{
-//    int height = 80;
-//    return CGSizeMake(ScreenWidth, height);
-//}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    _contentLabel.frame = CGRectMake(10, 0, 200, self.bounds.size.height);
+}
 
 @end
